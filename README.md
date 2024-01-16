@@ -67,4 +67,5 @@ Build powerful, cloud-based communication and customer engagement experiences by
 
  ## Last change
 
- 
+ ** [0.1.0](https://github.com/jliglesias/azure-email-communicator/blob/main/CHANGELOG.md)
+  * Main release
