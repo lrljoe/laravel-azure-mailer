@@ -1,6 +1,6 @@
 <?php
 
-namespace Hafael\Azure\Mailer;
+namespace Avantia\Azure\Mailer;
 
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hafael\Azure\Mailer;
+namespace Avantia\Azure\Mailer;
 
 Use App\Mail\AzureMailerTransport;
 use Illuminate\Support\Facades\Mail;
