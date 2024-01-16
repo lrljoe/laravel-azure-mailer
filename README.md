@@ -18,7 +18,7 @@ First time using Azure ECS? Create your [Azure account](https://azure.com), if y
 
 3. Get your Azure CS Access Key and Service Endpoint.
 
-## Mailer Configuration
+## Configuration
 
 Add entry to [root-of-laravel]/config/mail.php:
 ```php
