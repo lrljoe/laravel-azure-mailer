@@ -64,3 +64,7 @@ Build powerful, cloud-based communication and customer engagement experiences by
 
  - Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/)
  - Prepare Email Communication resource for Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/concepts/email/prepare-email-communication-resource/)
+
+ ## Last change
+
+ 
