@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Avantia\\Azure\\Mailer\\AzureMailerServiceProvider"
+                "Avantia\\Azure\\Mailer\\Providers\\AzureMailerServiceProvider"
             ]
         }
     }
