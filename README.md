@@ -1,7 +1,11 @@
 # Microsoft Azure Mailer for Laravel
 
+Provides Azure Communication Service integration for Symfony Mailer / Laravel.
 
 ## Requirements
+
+- PHP 8.2 or higher
+- A[Azure account](https://azure.com), Azure CS Access Key and Service Endpoint.
 
 ## Installation
 
