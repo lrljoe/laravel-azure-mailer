@@ -23,7 +23,7 @@ First time using Azure ECS? Create your [Azure account](https://azure.com), if y
 Add entry to [root-of-laravel]/config/mail.php:
 ```php
   <?php
-    
+
     ...
 
     'mailers' => [
@@ -41,3 +41,26 @@ Add entry to [root-of-laravel]/config/mail.php:
 
   ?>
 ```
+Add entry to [root-of-laravel]/.env:
+  
+```text 
+  
+  #...other entries
+
+  # Mail service entries... 
+  MAIL_MAILER=azure
+  
+  # Azure Service entries
+  AZURE_MAIL_RESOURCE_NAME=my-acs-resource-name
+  # AZURE_MAIL_ENDPOINT= #optional
+  AZURE_MAIL_KEY=AzureAccessToken
+  # AZURE_MAIL_API_VERSION=2023-03-31 #optional
+  # AZURE_MAIL_DISABLE_TRACKING=false #optional
+  
+```
+## Documentation
+
+Build powerful, cloud-based communication and customer engagement experiences by adding email integration with Azure Communication Service to your apps.
+
+ - Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/)
+ - Prepare Email Communication resource for Azure Communication Service: [English](https://learn.microsoft.com/en-us/azure/communication-services/concepts/email/prepare-email-communication-resource/)
