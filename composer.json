@@ -4,7 +4,7 @@
     "homepage": "https://github.com/jliglesias/azure-email-communicator",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "keywords": ["azure", "php", "azure communication service", "microsoft", "email", "driver", "mailer", "laravel", "symfony"],
     "require": {
         "php": ">=8.2",
