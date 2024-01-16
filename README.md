@@ -69,3 +69,8 @@ Build powerful, cloud-based communication and customer engagement experiences by
 
  ** [0.1.0](https://github.com/jliglesias/azure-email-communicator/blob/main/CHANGELOG.md)
   * Main release
+
+## License 
+
+MIT license. Copyright (c) 2024 - [jliglesias](https://github.com/jliglesias)
+For more information, see the [LICENSE](https://github.com/jliglesias/azure-email-communicator/blob/main/LICENSE) file.
