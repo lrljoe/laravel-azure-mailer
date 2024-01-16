@@ -2,7 +2,7 @@
 
 namespace Avantia\Azure\Mailer;
 
-Use App\Mail\AzureMailerTransport;
+Use Avantia\Azure\Mailer\AzureMailerTransport;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
 
