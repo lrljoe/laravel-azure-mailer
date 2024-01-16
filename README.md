@@ -17,3 +17,27 @@ First time using Azure ECS? Create your [Azure account](https://azure.com), if y
 `composer require jliglesias/azure-email-communicator`
 
 3. Get your Azure CS Access Key and Service Endpoint.
+
+## Mailer Configuration
+
+Add entry to [root-of-laravel]/config/mail.php:
+```php
+  <?php
+    
+    ...
+
+    'mailers' => [
+        //...other drivers
+
+        'azure' => [
+            'transport'             => 'azure',
+            'resource_name'         => env('AZURE_MAIL_RESOURCE_NAME'),
+            'endpoint'              => env('AZURE_MAIL_ENDPOINT', 'https://my-acs-resource-name.communication.azure.com'),
+            'access_key'            => env('AZURE_MAIL_KEY'),
+            'api_version'           => env('AZURE_MAIL_API_VERSION', '2023-03-31'),
+            'disable_user_tracking' => env('AZURE_MAIL_DISABLE_TRACKING', false),
+        ],
+    ]
+
+  ?>
+```
