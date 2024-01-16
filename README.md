@@ -63,4 +63,4 @@ Add entry to [root-of-laravel]/.env:
 Build powerful, cloud-based communication and customer engagement experiences by adding email integration with Azure Communication Service to your apps.
 
  - Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/)
- - Prepare Email Communication resource for Azure Communication Service: [English](https://learn.microsoft.com/en-us/azure/communication-services/concepts/email/prepare-email-communication-resource/)
+ - Prepare Email Communication resource for Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/concepts/email/prepare-email-communication-resource/)
