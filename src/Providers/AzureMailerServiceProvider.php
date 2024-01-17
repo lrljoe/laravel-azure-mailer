@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Avantia\Azure\Mailer;
+namespace Avantia\Azure\Mailer\Providers;
 
-Use AzureMailerTransport;
+Use Avantia\Azure\Mailer\Transports\AzureMailerTransport;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
 
