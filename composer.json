@@ -5,6 +5,7 @@
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "keywords": ["azure", "php", "azure communication service", "microsoft", "email", "driver", "mailer", "laravel", "symfony"],
     "require": {
         "php": ">=8.2",
@@ -23,6 +24,9 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
