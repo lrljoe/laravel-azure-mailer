@@ -19,7 +19,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Avantia\\Azure\\Mailer\\": "src/"
+            "Avantia\\Azure\\Mailer\\": "Avantia/Azure/Mailer/src/"
         }
     },
     "scripts": {
