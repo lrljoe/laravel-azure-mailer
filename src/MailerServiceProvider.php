@@ -20,7 +20,7 @@ class MailerServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        App::register(Providers\AzureMailerServiceProvider::class);
+        \App::register(Providers\AzureMailerServiceProvider::class);
     }
     
     /**
