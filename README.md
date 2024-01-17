@@ -109,7 +109,7 @@ Mail::send('my.view', $data, function($message)use($data, $files) {
 Sending mail from javascript:
 
 ```text
-var formData = { _token:"{{ csrf_token() }}",
+var message = { _token:"{{ csrf_token() }}",
                     email:{
                       to:[
                           { email: 'jliglesias@gmail.com', name: 'Juan Luis Iglesias' },
@@ -132,7 +132,7 @@ var formData = { _token:"{{ csrf_token() }}",
   $.ajax({
       type: 'GET',
       url: '/send-mail',
-      data: formData,
+      data: message,
       dataType: 'json',
       cache: false,
       crossDomain: true,
