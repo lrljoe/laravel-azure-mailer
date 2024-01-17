@@ -114,5 +114,5 @@ If you need more information, read the Laravel (10x) documentation: [English](ht
 
 ## License 
 
-MIT license. Copyright (c) 2024 - [jliglesias](https://github.com/jliglesias)
+MIT license. Copyright (c) 2024 - [Juan Luis Iglesias](https://github.com/jliglesias)
 For more information, see the [LICENSE](https://github.com/jliglesias/azure-email-communicator/blob/main/LICENSE) file.
