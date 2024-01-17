@@ -21,9 +21,10 @@ class MailerServiceProvider extends ServiceProvider
     public function register(): void
     {
         \App::register(Providers\AzureMailerServiceProvider::class);
-        
+        \Event::subscribe(Listeners\EmailEventSubscriber::class);
+
         \Route::group(['middleware' => ['web', 'auth']] , function(){
-            \Route::get('/send-mail', [Http\Controllers\MailController::class, 'sendMail']);
+            \Route::get('/send-mail', [Http\Controllers\AjaxMailController::class, 'sendMail']);
         });
     }
     
@@ -32,6 +33,6 @@ class MailerServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/Resources/Views','mailer');
     }
 }
