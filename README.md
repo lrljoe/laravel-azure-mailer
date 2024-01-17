@@ -93,6 +93,7 @@ $files = [
       public_path('files/160031367318.pdf'),
       public_path('files/1599882252.png'),
 ];
+
 Mail::send('my.view', $data, function($message)use($data, $files) {
             
             $message->to($data["to"])
@@ -101,7 +102,7 @@ Mail::send('my.view', $data, function($message)use($data, $files) {
             foreach ($files as $file){
                 $message->attach($file);
             }
-            
+
  });
 ```
 If you need more information, read the Laravel (10x) documentation: [English](https://laravel.com/docs/10.x/mail)
