@@ -4,7 +4,8 @@ Provides Azure Communication Service integration for Symfony Mailer / Laravel.
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.2 or higher.
+- [Laravel 10.x](https://laravel.com/docs/10.x) or higher.
 - [Azure account](https://azure.com), Azure CS Access Key and Service Endpoint.
 
 ## Installation
@@ -105,11 +106,52 @@ Mail::send('my.view', $data, function($message)use($data, $files) {
 
  });
 ```
+Sending mail from javascript:
+
+```text
+var formData = { _token:"{{ csrf_token() }}",
+                    email:{
+                      to:[
+                          { email: 'jliglesias@gmail.com', name: 'Juan Luis Iglesias' },
+                          //{ email: 'jliglesias@avantia-ic.com', name: 'Juan Luis Iglesias' }
+                      ],
+                      // cc:[],
+                      // bcc:[],
+                      // attatchments; { // to be implemented
+                      //                  storage:'local',           
+                      //                  files: [] 
+                      // }
+                      // subject:'' // to be implemented
+                      // content:'' // to be implemented
+                      class:{
+                          name: '', // namespace/classname of Mailable class
+                          args: []  // arguments passed to the class constructor.
+                      }
+                    } 
+                };
+  $.ajax({
+      type: 'GET',
+      url: '/send-mail',
+      data: formData,
+      dataType: 'json',
+      cache: false,
+      crossDomain: true,
+      headers:{
+          'X-CSRF-TOKEN': "{{ csrf_token() }}",
+          'X-Requested-With': 'XMLHttpRequest'
+      }
+  })
+  .always(function(jqXHR, textStatus, errorThrown) {
+      var data = JSON.parse(jqXHR.data);
+      if (data.statusCode !== 202 ) throw new Error(data.error);
+  });
+```
+
 If you need more information, read the Laravel (10x) documentation: [English](https://laravel.com/docs/10.x/mail)
 
  ## Last change
 
- ** [0.1.0](https://github.com/jliglesias/azure-email-communicator/blob/main/CHANGELOG.md)
+ ** [0.1.0-beta.1](https://github.com/jliglesias/laravel-azure-mailer/blob/master/CHANGELOG.md#010)
   * Main release
 
 ## License 
