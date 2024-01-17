@@ -20,7 +20,6 @@ use Symfony\Component\Mailer\Exception\HttpTransportException;
 use Symfony\Component\HttpClient\HttpClient;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Events\Dispatcher;
-use Illuminate\Support\Facades\Log;
 
 class AjaxEmailEventSubscriber
 {
@@ -101,9 +100,6 @@ class AjaxEmailEventSubscriber
     /**
      * Register the listeners for the subscriber.
      */
-    // public function subscribe(Dispatcher $events): void{
-    //     Log::debug('TestEventSubscriber->subcribe');
-    // }
     public function subscribe(Dispatcher $events): array{
         return [
             AjaxSendEmailNotificationEvent::class => 'SendMail',
