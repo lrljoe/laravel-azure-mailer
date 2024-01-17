@@ -2,7 +2,7 @@
     "name": "jliglesias/laravel-azure-mailer",
     "description": "Provides Microsoft Azure ACS integration for laravel. Azure Communication Services allows you to easily add real-time multimedia voice, video, and telephony-over-IP communications features to your applications. The Communication Services Email client libraries also allow you to add chat and EMAIL functionality to your communications solutions.",
     "homepage": "https://github.com/jliglesias/azure-email-communicator",
-    "type": "library",
+    "type": "project",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
