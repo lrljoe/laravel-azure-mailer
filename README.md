@@ -64,6 +64,18 @@ Build powerful, cloud-based communication and customer engagement experiences by
 
  - Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/)
  - Prepare Email Communication resource for Azure Communication Service Docs: [English](https://learn.microsoft.com/en-us/azure/communication-services/concepts/email/prepare-email-communication-resource/)
+ - Sending mail with Laravel (10x): [English](https://laravel.com/docs/10.x/mail#sending-mail)
+
+ ## Examples
+
+Simple mail sending:
+
+```text 
+Mail::to($request->user())
+    ->cc($moreUsers)
+    ->bcc($evenMoreUsers)
+    ->send(new OrderShipped($order));
+```
 
  ## Last change
 
