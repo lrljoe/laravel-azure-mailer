@@ -3,7 +3,7 @@
 /*
  * This file is part of the Avantia package.
  *
- * (c) Juan Luis Iglesias <jliglesas@gmail.com>
+ * (c) Juan Luis Iglesias <jliglesias@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,7 +12,6 @@
 namespace Avantia\Azure\Mailer\Events;
 
 use Illuminate\Http\Request;
-use Illuminate\Mail\Mailable;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -21,7 +20,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class SendEmailNotificationEvent
+class AjaxSendEmailNotificationEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 

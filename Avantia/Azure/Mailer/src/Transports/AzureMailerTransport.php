@@ -20,7 +20,6 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\Envelope;
 use Symfony\Component\Mime\MessageConverter;
-use Illuminate\Support\Facades\Log;
 
 class AzureMailerTransport extends AbstractTransport
 {

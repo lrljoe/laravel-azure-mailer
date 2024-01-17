@@ -3,7 +3,7 @@
 /*
  * This file is part of the Avantia package.
  *
- * (c) Juan Luis Iglesias <jliglesas@gmail.com>
+ * (c) Juan Luis Iglesias <jliglesias@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,10 +11,8 @@
 
 namespace Avantia\Azure\Mailer\Listeners;
 
-use Avantia\Azure\Mailer\Events\SendEmailNotificationEvent;
-use Avantia\Azure\Mailer\Events\AzureMailerTransportEvent;
+use Avantia\Azure\Mailer\Events\AjaxSendEmailNotificationEvent;
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\Mime\Address;
 
@@ -22,11 +20,12 @@ use Symfony\Component\Mailer\Exception\HttpTransportException;
 use Symfony\Component\HttpClient\HttpClient;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Events\Dispatcher;
+use Illuminate\Support\Facades\Log;
 
-class EmailEventSubscriber
+class AjaxEmailEventSubscriber
 {
     
-    private function getEmailclass(SendEmailNotificationEvent $event): object {
+    private function getEmailclass(AjaxSendEmailNotificationEvent $event): object {
 
         if (empty(((object) $event->request->email)->class)){
             $email = (object) $event->request->email;
@@ -39,7 +38,7 @@ class EmailEventSubscriber
         return $email;
     }
 
-    private function getRecients(SendEmailNotificationEvent $event, $type): Array {
+    private function getRecients(AjaxSendEmailNotificationEvent $event, $type): Array {
 
         $recipients = [];
         if (empty(((object) $event->request->email)->$type)){
@@ -64,8 +63,9 @@ class EmailEventSubscriber
     /**
      * Handle user login events.
      */
-    public function SendMail(SendEmailNotificationEvent $event): JsonResponse {
+    public function SendMail(AjaxSendEmailNotificationEvent $event): JsonResponse {
        
+       // Log::debug('EmailEventSubscriber->SendMail');
         if (empty($event->request->email)) {
             $res = response()->json(
                 [
@@ -106,7 +106,7 @@ class EmailEventSubscriber
     // }
     public function subscribe(Dispatcher $events): array{
         return [
-            SendEmailNotificationEvent::class => 'SendMail',
+            AjaxSendEmailNotificationEvent::class => 'SendMail',
         ];
     }
 
