@@ -81,7 +81,7 @@ or
 Mail::to([new Address('user.name@domain.com', 'My User Name'), ...])
     ->cc([new Address('user.name@domain.com', 'My User Name'), ...])
     ->bcc([new Address('user.name@domain.com', 'My User Name'), ...])
-    ->send(new OrderShipped($order));
+    ->send('my.view');
 ```
 Sending mail with attachments:
 ```text 
@@ -93,8 +93,7 @@ $files = [
       public_path('files/160031367318.pdf'),
       public_path('files/1599882252.png'),
 ];
-
-Mail::send('emails.myTestMail', $data, function($message)use($data, $files) {
+Mail::send('my.view', $data, function($message)use($data, $files) {
             
             $message->to($data["to"])
                     ->subject($data["subject"]);
@@ -102,6 +101,7 @@ Mail::send('emails.myTestMail', $data, function($message)use($data, $files) {
             foreach ($files as $file){
                 $message->attach($file);
             }
+            
  });
 ```
 If you need more information, read the Laravel (10x) documentation: [English](https://laravel.com/docs/10.x/mail)
