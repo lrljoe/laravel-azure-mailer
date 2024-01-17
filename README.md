@@ -14,7 +14,7 @@ First time using Azure ECS? Create your [Azure account](https://azure.com), if y
 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) if not already installed
 
 2. On your project directory run on the command line
-`composer require jliglesias/azure-email-communicator`
+`composer require jliglesias/laravel-azure-mailer`
 
 3. Get your Azure CS Access Key and Service Endpoint.
 
