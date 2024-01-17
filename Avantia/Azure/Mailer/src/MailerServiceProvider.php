@@ -21,6 +21,10 @@ class MailerServiceProvider extends ServiceProvider
     public function register(): void
     {
         \App::register(Providers\AzureMailerServiceProvider::class);
+        
+        \Route::group(['middleware' => ['web', 'auth']] , function(){
+            \Route::get('/send-mail', [Http\Controllers\MailController::class, 'sendMail']);
+        });
     }
     
     /**
