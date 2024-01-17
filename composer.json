@@ -18,9 +18,9 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "Avantia\\Azure\\Mailer\\": "src/"
+        }
     },
     "scripts": {
         "test": "./vendor/bin/phpunit"
