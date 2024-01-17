@@ -89,7 +89,7 @@ Sending mail with attachments:
 $data = [
       to => [new Address('user.name@domain.com', 'My User Name'), ...],
       subject => 'Subject'
-]
+];
 $files = [
       public_path('files/160031367318.pdf'),
       public_path('files/1599882252.png'),
