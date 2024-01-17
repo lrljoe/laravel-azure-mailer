@@ -1,6 +1,6 @@
 <?php
 
-namespace Avantia\Azure\Mailer;
+namespace Avantia\Azure\Mailer\Transports;
 
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
@@ -11,6 +11,7 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\Envelope;
 use Symfony\Component\Mime\MessageConverter;
+use Illuminate\Support\Facades\Log;
 
 class AzureMailerTransport extends AbstractTransport
 {
