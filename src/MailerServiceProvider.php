@@ -29,6 +29,6 @@ class MailerServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        
+        //
     }
 }
