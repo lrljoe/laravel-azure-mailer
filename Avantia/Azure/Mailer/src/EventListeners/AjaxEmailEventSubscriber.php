@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Avantia\Azure\Mailer\Listeners;
+namespace Avantia\Azure\Mailer\EventListeners;
 
 use Avantia\Azure\Mailer\Events\AjaxSendEmailNotificationEvent;
 
