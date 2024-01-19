@@ -106,47 +106,6 @@ Mail::send('my.view', $data, function($message)use($data, $files) {
 
  });
 ```
-Sending mail from javascript:
-
-```text
-var message = { _token:"{{ csrf_token() }}",
-                    email:{
-                      to:[
-                          { email: 'jliglesias@gmail.com', name: 'Juan Luis Iglesias' },
-                          //{ email: 'jliglesias@avantia-ic.com', name: 'Juan Luis Iglesias' }
-                      ],
-                      // cc:[],
-                      // bcc:[],
-                      // attatchments; { // to be implemented
-                      //                  storage:'local',           
-                      //                  files: [] 
-                      // }
-                      // subject:'' // to be implemented
-                      // content:'' // to be implemented
-                      class:{
-                          name: '', // namespace/classname of Mailable class
-                          args: []  // arguments passed to the class constructor.
-                      }
-                    } 
-                };
-  $.ajax({
-      type: 'GET',
-      url: '/send-mail',
-      data: message,
-      dataType: 'json',
-      cache: false,
-      crossDomain: true,
-      headers:{
-          'X-CSRF-TOKEN': "{{ csrf_token() }}",
-          'X-Requested-With': 'XMLHttpRequest'
-      }
-  })
-  .always(function(jqXHR, textStatus, errorThrown) {
-      var data = JSON.parse(jqXHR.data);
-      if (data.statusCode !== 202 ) throw new Error(data.error);
-  });
-```
-
 If you need more information, read the Laravel (10x) documentation: [English](https://laravel.com/docs/10.x/mail)
 
  ## Last change
