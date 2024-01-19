@@ -1,4 +1,4 @@
-# Microsoft Azure Mailer for Laravel
+# Microsoft Azure Mailer Driver for Laravel
 
 Provides Azure Communication Service integration for Symfony Mailer / Laravel.
 
