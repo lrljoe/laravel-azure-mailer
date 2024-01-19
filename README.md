@@ -112,6 +112,7 @@ If you need more information, read the Laravel (10x) documentation: [English](ht
 
  ** [0.1.0-beta.1](https://github.com/jliglesias/laravel-azure-mailer/blob/master/CHANGELOG.md#010)
   * Main release.
+  
  ** [0.1.1.-beta.1](https://github.com/jliglesias/laravel-azure-mailer/blob/master/CHANGELOG.md#010)
   * Remove folders and files for testing event dispatch and callbacks using AJAX (JQUERY).
 
