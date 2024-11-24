@@ -9,8 +9,8 @@
     "keywords": ["azure", "php", "azure communication service", "microsoft", "email", "driver", "mailer", "laravel", "symfony"],
     "require": {
         "php": ">=8.2",
-        "laravel/framework": "^10.0",
-        "symfony/mailer": "^6.4"
+        "laravel/framework": "^10.0|^11.0",
+        "symfony/mailer": "^6.4|^7.0"
     },
     "authors": [
         {
